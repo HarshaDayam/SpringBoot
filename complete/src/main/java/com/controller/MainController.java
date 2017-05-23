@@ -28,18 +28,6 @@ public class MainController {
 	@Autowired 
 	private UserService userService;
 	
-
-	/*
-	 * @GetMapping(path = "/add") // Map ONLY GET Requests public @ResponseBody
-	 * String addNewUser(@RequestParam String name, @RequestParam String email)
-	 * { // @ResponseBody means the returned String is the response, not a view
-	 * // name // @RequestParam means it is a parameter from the GET or POST
-	 * request
-	 * 
-	 * User n = new User(); n.setName(name); n.setEmail(email);
-	 * userRepository.save(n); return "Saved"; }
-	 */
-
 	@PostMapping(value = "/user")
 	public ResponseEntity createUser(@RequestBody User user) {
 
